@@ -1,6 +1,6 @@
 export const deleteContact = async (id: number) => {
   try {
-    await fetch(`${import.meta.env.API_URL}/contacts/${id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/contacts/${id}`, {
       method: 'DELETE'
     })
   } catch (err) {
