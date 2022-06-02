@@ -4,7 +4,7 @@ export const getContactById = async (
   id: string | number
 ): Promise<ContactProps | undefined> => {
   try {
-    const data = await fetch(`http://localhost:3333/contacts/${id}`, {
+    const data = await fetch(`${import.meta.env.VITE_API_URL}/contacts/${id}`, {
       method: 'GET'
     })
       .then((response) => response.json())

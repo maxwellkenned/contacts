@@ -5,7 +5,7 @@ export const getContactByName = async (
 ): Promise<ContactProps[] | undefined> => {
   try {
     const data = await fetch(
-      `http://localhost:3333/contacts?name_like=${name}`,
+      `${import.meta.env.VITE_API_URL}/contacts?name_like=${name}`,
       {
         method: 'GET'
       }

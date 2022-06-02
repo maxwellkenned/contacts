@@ -5,7 +5,7 @@ export const putContact = async (
   contact: ContactProps
 ): Promise<ContactProps[] | undefined> => {
   try {
-    const data = await fetch(`http://localhost:3333/contacts/${id}`, {
+    const data = await fetch(`${import.meta.env.VITE_API_URL}/contacts/${id}`, {
       method: 'PUT',
       headers: {
         Accept: 'application/json',

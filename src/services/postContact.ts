@@ -2,7 +2,7 @@ import { FormContactProps } from '../types/contacts'
 
 export const postContacts = async (data: FormContactProps) => {
   try {
-    await fetch('http://localhost:3333/contacts', {
+    await fetch(`${import.meta.env.VITE_API_URL}/contacts`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
