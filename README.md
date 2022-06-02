@@ -15,6 +15,8 @@ cd contacts
 
 yarn install
 
+cp .env.exemple .env.local
+
 yarn dev
 ```
 
